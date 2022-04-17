@@ -3,95 +3,6 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image5":
-            case "Tank Cat":return img`
-................
-...1........1...
-...11......11...
-...1111111111...
-...1111111111...
-...111f11f111...
-...111f11f111...
-...1111111111...
-...1111ff1111...
-...1111ff1111...
-...111f11f111...
-...11f1111f11...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-.....11..11.....
-.....11..11.....
-`;
-            case "image6":
-            case "Doge Enemy":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . 1 . . . . . 1 . . . . 
-. . . . 1 1 . . . . 1 1 . . . . 
-. . . 1 1 1 . . . 1 1 1 . . . . 
-. . 1 1 1 1 1 1 1 1 1 1 1 . . . 
-. . 1 1 f 1 1 1 1 1 f 1 1 . . . 
-. . 1 1 1 f 1 1 1 f 1 1 1 . . . 
-. . 1 1 1 1 f 1 f 1 1 1 1 . . . 
-. . 1 1 1 f 1 1 1 f 1 1 1 . . . 
-. . 1 1 1 1 f f f 1 1 1 1 . . . 
-. . 1 1 1 1 1 f 1 1 1 1 1 . . . 
-. . 1 1 1 f 1 1 1 f 1 1 1 . . . 
-. . 1 1 1 f f f f f 1 1 1 . . . 
-. . 1 1 1 1 1 1 1 1 1 1 1 . . . 
-. . . . 1 1 . . . 1 1 . . . . . 
-. . . . 1 1 . . . 1 1 . . . . . 
-`;
-            case "image7":
-            case "Tank Cat Damaged":return img`
-................
-...1........1...
-...11......11...
-...1111111111...
-...1111111111...
-...111f11f111...
-...111f11f111...
-...1111111111...
-...1111ff1111...
-...1111ff1111...
-...111f11f111...
-...11f1111f11...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-...1111111111...
-.....11..11.....
-.....11..11.....
-`;
             case "image8":
             case "Doge Base":return img`
 ......................
@@ -126,52 +37,6 @@ namespace myImages {
 ...11111eefffffd411...
 .....111e1fffffd111...
 .....11111fffffd111...
-`;
-            case "image12":
-            case "Axe Cat Summon":return img`
-dddddddddddddddddddddddddddddddd
-dddddddddddddddddd444d444d444ddd
-dddddddddddddddddddd4d4d4d4d4ddd
-dddddddddddddddddd444d4d4d4d4ddd
-dddddddddddddddddd4ddd4d4d4d4ddd
-ddddbdddd1dddddbbd444d444d444ddd
-ddddbbdd11dddddbb1dddddddddddddd
-dddbbb11111ddddd1bbddddddddddddd
-ddbfbf111111ddd4bbbbdddddddddddd
-dbbbfb11f1111d4ddbbbbddddddddddd
-dbbfbf11f11114dddbbbbbdddddddddd
-d111111111111ddddbbbbbbddddddddd
-d11111ff11111ddddddddbbddddddddd
-d111f1ff1f111ddddddddddddddddddd
-d1111f11f1111ddddddddddddddddddd
-d1111f11f1111ddddddddddddddddddd
-d11111ff11111ddddddddddddddddddd
-dd1111111111dddddddddddddddddddd
-ddd11dddd11ddddddddddddddddddddd
-ddd11dddd11ddddddddddddddddddddd
-`;
-            case "image11":
-            case "Axe Cat":return img`
-................................
-................................
-................................
-................................
-................................
-............bb.....1....b.......
-...........1bb.....11..bb.......
-..........bb1.....11111bbb......
-.........bbbb4...111111fbfb.....
-........bbbb..4.1111f11bfbbb....
-.......bbbbb...41111f11fbfbb....
-......bbbbbb....111111111111....
-......bb........11111ff11111....
-................111f1ff1f111....
-................1111f11f1111....
-................1111f11f1111....
-................11111ff11111....
-.................1111111111.....
-..................11....11......
-..................11....11......
 `;
             case "Ogp-,(slzm0|MC5ZyF=n":
             case "Background":return img`
@@ -419,29 +284,6 @@ ddd11dddd11ddddddddddddddddddddd
 7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
 7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
 `;
-            case "image13":
-            case "Axe Cat Summon Selected":return img`
-22222222222222222222222222222222
-2ddddddddddddddddd444d444d444dd2
-2ddddddddddddddddddd4d4d4d4d4dd2
-2ddddddddddddddddd444d4d4d4d4dd2
-2ddddddddddddddddd4ddd4d4d4d4dd2
-2dddbdddd1dddddbbd444d444d444dd2
-2dddbbdd11dddddbb1ddddddddddddd2
-2ddbbb11111ddddd1bbdddddddddddd2
-2dbfbf111111ddd4bbbbddddddddddd2
-2bbbfb11f1111d4ddbbbbdddddddddd2
-2bbfbf11f11114dddbbbbbddddddddd2
-2111111111111ddddbbbbbbdddddddd2
-211111ff11111ddddddddbbdddddddd2
-2111f1ff1f111dddddddddddddddddd2
-21111f11f1111dddddddddddddddddd2
-21111f11f1111dddddddddddddddddd2
-211111ff11111dddddddddddddddddd2
-2d1111111111ddddddddddddddddddd2
-2dd11dddd11dddddddddddddddddddd2
-22222222222222222222222222222222
-`;
             case "image14":
             case "Ms Sign":return img`
 ................................
@@ -477,136 +319,6 @@ ddd11dddd11ddddddddddddddddddddd
 .........1..1...................
 ........1....1..................
 `;
-            case "image4":
-            case "Tank Cat Summon":return img`
-dddddddddddddddddddddddddddddddd
-dddd1dddd1ddddd4d444d444dddddddd
-dddd11dd11ddddd4d4d4d4d4dddddddd
-ddd11111111dddd4d4d4d4d4dddddddd
-ddd11f11f11dddd4d4d4d4d4dddddddd
-ddd11f11f11dddd4d444d444dddddddd
-ddd11111111ddddddddddddddddddddd
-ddd111ff111ddddddddddddddddddddd
-ddd111ff111ddddddddddddddddddddd
-ddd11f11f11ddddddddddddddddddddd
-ddd1f1111f1ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-ddd11111111ddddddddddddddddddddd
-`;
-            case "image9":
-            case "Normal Cat Summon Selected":return img`
-22222222222222222222222222222222
-2dddddddddddddddddddddddddddddd2
-2dddddddddddddddddddddddddddddd2
-2dddddddddddddddddddddddddddddd2
-2ddd1dddd1ddddddddddddddddddddd2
-2ddd11dd11dddddd444d444dddddddd2
-2dd11111111ddddd4ddd4d4dddddddd2
-2d1111111111dddd444d4d4dddddddd2
-2d111f11f111dddddd4d4d4dddddddd2
-2d111f11f111dddd444d444dddddddd2
-2d1111111111ddddddddddddddddddd2
-2d1111ff1111ddddddddddddddddddd2
-2d11f1ff1f11ddddddddddddddddddd2
-2d111f11f111ddddddddddddddddddd2
-2d1111111111ddddddddddddddddddd2
-2ddd11dd11ddddddddddddddddddddd2
-2ddd11dd11ddddddddddddddddddddd2
-2dddddddddddddddddddddddddddddd2
-2dddddddddddddddddddddddddddddd2
-22222222222222222222222222222222
-`;
-            case "image2":
-            case "Normal Cat Summon":return img`
-dddddddddddddddddddddddddddddddd
-dddddddddddddddddddddddddddddddd
-dddddddddddddddddddddddddddddddd
-dddddddddddddddddddddddddddddddd
-dddd1dddd1dddddddddddddddddddddd
-dddd11dd11dddddd444d444ddddddddd
-ddd11111111ddddd4ddd4d4ddddddddd
-dd1111111111dddd444d4d4ddddddddd
-dd111f11f111dddddd4d4d4ddddddddd
-dd111f11f111dddd444d444ddddddddd
-dd1111111111dddddddddddddddddddd
-dd1111ff1111dddddddddddddddddddd
-dd11f1ff1f11dddddddddddddddddddd
-dd111f11f111dddddddddddddddddddd
-dd1111111111dddddddddddddddddddd
-dddd11dd11dddddddddddddddddddddd
-dddd11dd11dddddddddddddddddddddd
-dddddddddddddddddddddddddddddddd
-dddddddddddddddddddddddddddddddd
-dddddddddddddddddddddddddddddddd
-`;
-            case "image10":
-            case "Tank Cat Summon Selected":return img`
-22222222222222222222222222222222
-2ddd1dddd1ddddd4d444d444ddddddd2
-2ddd11dd11ddddd4d4d4d4d4ddddddd2
-2dd11111111dddd4d4d4d4d4ddddddd2
-2dd11f11f11dddd4d4d4d4d4ddddddd2
-2dd11f11f11dddd4d444d444ddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd111ff111dddddddddddddddddddd2
-2dd111ff111dddddddddddddddddddd2
-2dd11f11f11dddddddddddddddddddd2
-2dd1f1111f1dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-2dd11111111dddddddddddddddddddd2
-22222222222222222222222222222222
-`;
-            case "image1":
-            case "Normal Cat":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . 1 . . . . 1 . . . . . 
-. . . . . 1 1 . . 1 1 . . . . . 
-. . . . 1 1 1 1 1 1 1 1 . . . . 
-. . . 1 1 1 1 1 1 1 1 1 1 . . . 
-. . 1 1 1 1 f 1 1 f 1 1 1 1 . . 
-. . 1 1 1 1 f 1 1 f 1 1 1 1 . . 
-. . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
-. . 1 1 1 1 1 f f 1 1 1 1 1 . . 
-. . 1 1 1 f 1 f f 1 f 1 1 1 . . 
-. . 1 1 1 1 f 1 1 f 1 1 1 1 . . 
-. . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
-. . 1 1 1 1 1 1 1 1 1 1 1 1 . . 
-. . . 1 1 1 1 1 1 1 1 1 1 . . . 
-. . . . 1 1 . . . . 1 1 . . . . 
-. . . . 1 1 . . . . 1 1 . . . . 
-`;
-            case "image15":
-            case "Snake":return img`
-............................
-............................
-.....................11111..
-...................11111111.
-..................1111111111
-..................11111f11f1
-.................11111111111
-.................11111111111
-.................111111.....
-..................111111....
-........111.....b11111111...
-.b1....b1111....b111111111..
-..11..b111111..b11...111111.
-...111111..b11111...........
-....1111....b111............
-.....11......11.............
-`;
             case "image3":
             case "Cat Base":return img`
 ....................
@@ -641,6 +353,405 @@ dddddddddddddddddddddddddddddddd
 ....11edffffe1111...
 ....111dffff111ee...
 ....11dfffff441ee...
+`;
+            case "image12":
+            case "Axe Cat Summon":return img`
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+dddddbdddd1dddddbbdddddddd
+dddddbbdd11dddddbb1ddddddd
+ddddbbb11111ddddd1bbdddddd
+dddbfbf111111ddd4bbbbddddd
+ddbbbfb11f1111d4ddbbbbdddd
+ddbbfbf11f11114dddbbbbbddd
+dd111111111111ddddbbbbbbdd
+dd11111ff11111ddddddddbbdd
+dd111f1ff1f111dddddddddddd
+dd1111f11f1111dddddddddddd
+dd1111f11f1111dddddddddddd
+dd11111ff11111dddddddddddd
+ddd1111111111ddddddddddddd
+dddd11dddd11dddddddddddddd
+dddd11dddd11dddddddddddddd
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+dddddddd444d444d444ddddddd
+dddddddddd4d4d4d4d4ddddddd
+dddddddd444d4d4d4d4ddddddd
+dddddddd4ddd4d4d4d4ddddddd
+dddddddd444d444d444ddddddd
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+`;
+            case "image13":
+            case "Delet1":return img`
+22222222222222222222222222222222
+2ddddddddddddddddd444d444d444dd2
+2ddddddddddddddddddd4d4d4d4d4dd2
+2ddddddddddddddddd444d4d4d4d4dd2
+2ddddddddddddddddd4ddd4d4d4d4dd2
+2dddbdddd1dddddbbd444d444d444dd2
+2dddbbdd11dddddbb1ddddddddddddd2
+2ddbbb11111ddddd1bbdddddddddddd2
+2dbfbf111111ddd4bbbbddddddddddd2
+2bbbfb11f1111d4ddbbbbdddddddddd2
+2bbfbf11f11114dddbbbbbddddddddd2
+2111111111111ddddbbbbbbdddddddd2
+211111ff11111ddddddddbbdddddddd2
+2111f1ff1f111dddddddddddddddddd2
+21111f11f1111dddddddddddddddddd2
+21111f11f1111dddddddddddddddddd2
+211111ff11111dddddddddddddddddd2
+2d1111111111ddddddddddddddddddd2
+2dd11dddd11dddddddddddddddddddd2
+22222222222222222222222222222222
+`;
+            case "image4":
+            case "Tank Cat Summon":return img`
+dddddddddddddddddddddddddd
+dddddddddd1dddd1dddddddddd
+dddddddddd11dd11dddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11f11f11ddddddddd
+ddddddddd11f11f11ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd111ff111ddddddddd
+ddddddddd111ff111ddddddddd
+ddddddddd11f11f11ddddddddd
+ddddddddd1f1111f1ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11111111ddddddddd
+ddddddddd11111111ddddddddd
+dddddddddddddddddddddddddd
+dddddddd4d444d444ddddddddd
+dddddddd4d4d4d4d4ddddddddd
+dddddddd4d4d4d4d4ddddddddd
+dddddddd4d4d4d4d4ddddddddd
+dddddddd4d444d444ddddddddd
+dddddddddddddddddddddddddd
+`;
+            case "image10":
+            case "Delet2":return img`
+22222222222222222222222222222222
+2ddd1dddd1ddddd4d444d444ddddddd2
+2ddd11dd11ddddd4d4d4d4d4ddddddd2
+2dd11111111dddd4d4d4d4d4ddddddd2
+2dd11f11f11dddd4d4d4d4d4ddddddd2
+2dd11f11f11dddd4d444d444ddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd111ff111dddddddddddddddddddd2
+2dd111ff111dddddddddddddddddddd2
+2dd11f11f11dddddddddddddddddddd2
+2dd1f1111f1dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+2dd11111111dddddddddddddddddddd2
+22222222222222222222222222222222
+`;
+            case "image2":
+            case "Normal Cat Summon":return img`
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+dddddddddd1dddd1dddddddddd
+dddddddddd11dd11dddddddddd
+ddddddddd11111111ddddddddd
+dddddddd1111111111dddddddd
+dddddddd111f11f111dddddddd
+dddddddd111f11f111dddddddd
+dddddddd1111111111dddddddd
+dddddddd1111ff1111dddddddd
+dddddddd11f1ff1f11dddddddd
+dddddddd111f11f111dddddddd
+dddddddd1111111111dddddddd
+dddddddddd11dd11dddddddddd
+dddddddddd11dd11dddddddddd
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+dddddddddd444d444ddddddddd
+dddddddddd4ddd4d4ddddddddd
+dddddddddd444d4d4ddddddddd
+dddddddddddd4d4d4ddddddddd
+dddddddddd444d444ddddddddd
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+dddddddddddddddddddddddddd
+`;
+            case "image18":
+            case "Normal Cat Summon Selected":return img`
+22222222222222222222222222
+2dddddddddddddddddddddddd2
+2dddddddddddddddddddddddd2
+2ddddddddd1dddd1ddddddddd2
+2ddddddddd11dd11ddddddddd2
+2dddddddd11111111dddddddd2
+2ddddddd1111111111ddddddd2
+2ddddddd111f11f111ddddddd2
+2ddddddd111f11f111ddddddd2
+2ddddddd1111111111ddddddd2
+2ddddddd1111ff1111ddddddd2
+2ddddddd11f1ff1f11ddddddd2
+2ddddddd111f11f111ddddddd2
+2ddddddd1111111111ddddddd2
+2ddddddddd11dd11ddddddddd2
+2ddddddddd11dd11ddddddddd2
+2dddddddddddddddddddddddd2
+2dddddddddddddddddddddddd2
+2ddddddddd444d444dddddddd2
+2ddddddddd4ddd4d4dddddddd2
+2ddddddddd444d4d4dddddddd2
+2ddddddddddd4d4d4dddddddd2
+2ddddddddd444d444dddddddd2
+2dddddddddddddddddddddddd2
+2dddddddddddddddddddddddd2
+22222222222222222222222222
+`;
+            case "image17":
+            case "Tank Cat Summon Selected":return img`
+22222222222222222222222222
+2ddddddddd1dddd1ddddddddd2
+2ddddddddd11dd11ddddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11f11f11dddddddd2
+2dddddddd11f11f11dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd111ff111dddddddd2
+2dddddddd111ff111dddddddd2
+2dddddddd11f11f11dddddddd2
+2dddddddd1f1111f1dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddd11111111dddddddd2
+2dddddddddddddddddddddddd2
+2ddddddd4d444d444dddddddd2
+2ddddddd4d4d4d4d4dddddddd2
+2ddddddd4d4d4d4d4dddddddd2
+2ddddddd4d4d4d4d4dddddddd2
+2ddddddd4d444d444dddddddd2
+22222222222222222222222222
+`;
+            case "image16":
+            case "Axe Cat Summon Selected":return img`
+22222222222222222222222222
+2dddddddddddddddddddddddd2
+2ddddbdddd1dddddbbddddddd2
+2ddddbbdd11dddddbb1dddddd2
+2dddbbb11111ddddd1bbddddd2
+2ddbfbf111111ddd4bbbbdddd2
+2dbbbfb11f1111d4ddbbbbddd2
+2dbbfbf11f11114dddbbbbbdd2
+2d111111111111ddddbbbbbbd2
+2d11111ff11111ddddddddbbd2
+2d111f1ff1f111ddddddddddd2
+2d1111f11f1111ddddddddddd2
+2d1111f11f1111ddddddddddd2
+2d11111ff11111ddddddddddd2
+2dd1111111111dddddddddddd2
+2ddd11dddd11ddddddddddddd2
+2ddd11dddd11ddddddddddddd2
+2dddddddddddddddddddddddd2
+2dddddddddddddddddddddddd2
+2ddddddd444d444d444dddddd2
+2ddddddddd4d4d4d4d4dddddd2
+2ddddddd444d4d4d4d4dddddd2
+2ddddddd4ddd4d4d4d4dddddd2
+2ddddddd444d444d444dddddd2
+2dddddddddddddddddddddddd2
+22222222222222222222222222
+`;
+            case "image5":
+            case "Tank Cat":return img`
+................
+...1........1...
+...11......11d..
+...1111111111d..
+...1111111111d..
+...111f11f111d..
+...111f11f111d..
+...1111111111d..
+...1111ff1111d..
+...1111ff1111d..
+...111f11f111d..
+...11f1111f11d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+.....11d.11d....
+.....11d.11d....
+`;
+            case "image6":
+            case "Doge Enemy":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . 1 d . . . . 1 d . . . 
+. . . . 1 1 d . . . 1 1 d . . . 
+. . . 1 1 1 d . . 1 1 1 d . . . 
+. . 1 1 1 1 1 1 1 1 1 1 1 d . . 
+. . 1 1 f 1 1 1 1 1 f 1 1 d . . 
+. . 1 1 1 f 1 1 1 f 1 1 1 d . . 
+. . 1 1 1 1 f 1 f 1 1 1 1 d . . 
+. . 1 1 1 f 1 1 1 f 1 1 1 d . . 
+. . 1 1 1 1 f f f 1 1 1 1 d . . 
+. . 1 1 1 1 1 f 1 1 1 1 1 d . . 
+. . 1 1 1 f 1 1 1 f 1 1 1 d . . 
+. . 1 1 1 f f f f f 1 1 1 d . . 
+. . 1 1 1 1 1 1 1 1 1 1 1 d . . 
+. . . . 1 1 d . . 1 1 d . . . . 
+. . . . 1 1 d . . 1 1 d . . . . 
+`;
+            case "image11":
+            case "Axe Cat":return img`
+................................
+................................
+................................
+................................
+................................
+............bbd....1d...bd......
+...........1bbd....11d.bbd......
+..........bb1.....11111bbbd.....
+.........bbbb4...111111fbfbd....
+........bbbbd.4.1111f11bfbbbd...
+.......bbbbbd..41111f11fbfbbd...
+......bbbbbbd...111111111111d...
+......bbd.......11111ff11111d...
+................111f1ff1f111d...
+................1111f11f1111d...
+................1111f11f1111d...
+................11111ff11111d...
+.................1111111111d....
+..................11d...11d.....
+..................11d...11d.....
+`;
+            case "image1":
+            case "Normal Cat":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . 1 d . . . 1 d . . . . 
+. . . . . 1 1 d . 1 1 d . . . . 
+. . . . 1 1 1 1 1 1 1 1 d . . . 
+. . . 1 1 1 1 1 1 1 1 1 1 d . . 
+. . 1 1 1 1 f 1 1 f 1 1 1 1 d . 
+. . 1 1 1 1 f 1 1 f 1 1 1 1 d . 
+. . 1 1 1 1 1 1 1 1 1 1 1 1 d . 
+. . 1 1 1 1 1 f f 1 1 1 1 1 d . 
+. . 1 1 1 f 1 f f 1 f 1 1 1 d . 
+. . 1 1 1 1 f 1 1 f 1 1 1 1 d . 
+. . 1 1 1 1 1 1 1 1 1 1 1 1 d . 
+. . 1 1 1 1 1 1 1 1 1 1 1 1 d . 
+. . . 1 1 1 1 1 1 1 1 1 1 d . . 
+. . . . 1 1 d . . . 1 1 d . . . 
+. . . . 1 1 d . . . 1 1 d . . . 
+`;
+            case "image15":
+            case "Snake":return img`
+............................
+............................
+.....................11111..
+...................11111111.
+..................1111111111
+..................11111f11f1
+.................11111111111
+.................11111111111
+.................111111.....
+..................111111....
+........111.....b11111111...
+.b1....b1111....b111111111..
+..11..b111111..b11ddd111111.
+...111111d.b11111d....ddddd.
+....1111d...b111d...........
+.....11d.....11d............
+`;
+            case "image7":
+            case "Tank Cat Damaged":return img`
+................
+...1d.......fd..
+...11d.....ffd..
+...1111111111d..
+...1111111111d..
+...111f11f111d..
+...111f11f111d..
+...1111111111d..
+...1111ff1111d..
+...1111ff1111d..
+...111f11f111d..
+...11f1111f11d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...1111111111d..
+...111111ff11d..
+...1f111ff111d..
+...111111111fd..
+...11111111f1d..
+...1f11111111d..
+...ff111f1111d..
+...1111111111d..
+...11111111f1d..
+...11f11111f1d..
+...111111f111d..
+...1f11111111d..
+...1111ff1111d..
+...11111f1111d..
+.....11d.11d....
+.....11d.11d....
+`;
+            case "image9":
+            case "Doggy Quick":return img`
+...11d.......11d..........
+..1111d.....1111d.........
+..1111d.....1111d.........
+..1111d.....1111d.........
+..11111111111111d.........
+...111111111111...........
+..11111111111111d.........
+..111111111111111d........
+111111111111111111d.......
+111111f11111f11111d.......
+11111ff11111ff1111d.......
+11111ff11111ff1111d.......
+111111111111111111d.......
+fff111111f111111ffd...11..
+111111fff1fff11111d..1111d
+fff1111111111111ffd....11d
+fff1111111111111ffd.....1d
+..111111111111111d.....11d
+...1111111111111d.....111d
+.....111111111d......111d.
+.......1111111111111111d..
+.......111111111111111d...
+.......111111111111111d...
+.......111111111111111d...
+.......11d1111111d11d1d...
+......11d11d.....11d11d...
 `;
         }
         return null;

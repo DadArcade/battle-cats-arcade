@@ -7,6 +7,12 @@ namespace StatusBarKind {
     export const EnemyBaseHealth = StatusBarKind.create()
     export const CatBaseHealth = StatusBarKind.create()
 }
+function changeZ () {
+    Z += 1
+    if (Z > 4) {
+        Z = 0
+    }
+}
 sprites.onOverlap(SpriteKind.Projectile2, SpriteKind.EnemyBase, function (sprite, otherSprite) {
     music.pewPew.play()
     info.changeScoreBy(25)
@@ -18,9 +24,10 @@ sprites.onOverlap(SpriteKind.Projectile2, SpriteKind.EnemyBase, function (sprite
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Selected_Cat == 1) {
         if (49 < Money) {
+            changeZ()
             Money += -50
             Normal_Cat = sprites.create(assets.image`Normal Cat`, SpriteKind.Projectile2)
-            Normal_Cat.y = 70 + randint(0, 4)
+            Normal_Cat.y = 70 + Z
             Normal_Cat.x = 140
             Normal_Cat.setVelocity(-5, 0)
             music.baDing.play()
@@ -32,10 +39,11 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
     if (Selected_Cat == 2) {
+        changeZ()
         if (99 < Money) {
             Money += -100
             Tank_Cat = sprites.create(assets.image`Tank Cat`, SpriteKind.Projectile2)
-            Tank_Cat.y = 65 + randint(0, 4)
+            Tank_Cat.y = 65 + Z
             Tank_Cat.x = 140
             Tank_Cat.setVelocity(-3, 0)
             music.baDing.play()
@@ -48,9 +56,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
     if (Selected_Cat == 3) {
         if (199 < Money) {
+            changeZ()
             Money += -200
             Axe_Cat = sprites.create(assets.image`Axe Cat`, SpriteKind.Projectile2)
-            Axe_Cat.y = 68 + randint(0, 4)
+            Axe_Cat.y = 68 + Z
             Axe_Cat.x = 140
             Axe_Cat.setVelocity(-8, 0)
             music.baDing.play()
@@ -122,6 +131,7 @@ let Tank_Cat: Sprite = null
 let NormCatStatus: StatusBarSprite = null
 let Normal_Cat: Sprite = null
 let OneHP = 0
+let Z = 0
 let Axe_Cat_Summon: Sprite = null
 let Tank_Cat_Summon: Sprite = null
 let Normal_Cat_Summon: Sprite = null
@@ -134,12 +144,12 @@ Money = 0
 Selected_Cat = 1
 let Cat_Base = sprites.create(assets.image`Cat Base`, SpriteKind.Player)
 Cat_Base.y = 63
-Cat_Base.x = 130
+Cat_Base.right = 160
 let statusbar = statusbars.create(16, 2, StatusBarKind.CatBaseHealth)
 statusbar.attachToSprite(Cat_Base)
 let Doge_Base = sprites.create(assets.image`Doge Base`, SpriteKind.EnemyBase)
 Doge_Base.y = 63
-Doge_Base.x = 20
+Doge_Base.left = 1
 statusbar = statusbars.create(16, 2, StatusBarKind.EnemyBaseHealth)
 statusbar.attachToSprite(Doge_Base)
 let moneyText = textsprite.create("Money:", 1, 4)
@@ -160,6 +170,7 @@ Tank_Cat_Summon.x = 80
 Axe_Cat_Summon = sprites.create(assets.image`Axe Cat Summon`, SpriteKind.Player)
 Axe_Cat_Summon.y = 100
 Axe_Cat_Summon.x = 120
+Z = 0
 forever(function () {
     pause(150000)
     Ms_Sign = sprites.create(assets.image`Ms Sign`, SpriteKind.Enemy)
