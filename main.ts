@@ -28,7 +28,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             Money += -50
             Normal_Cat = sprites.create(assets.image`Normal Cat`, SpriteKind.Projectile2)
             Normal_Cat.y = 70 + Z
-            Normal_Cat.x = 140
+            Normal_Cat.x = 150
             Normal_Cat.setVelocity(-5, 0)
             music.baDing.play()
             NormCatStatus = statusbars.create(4, 1, StatusBarKind.Health)
@@ -40,11 +40,27 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
     if (Selected_Cat == 2) {
         changeZ()
+        if (59 < Money) {
+            Money += -60
+            Small_Cat = sprites.create(assets.image`Small Cat`, SpriteKind.Projectile2)
+            Small_Cat.y = 65 + Z
+            Small_Cat.x = 150
+            Small_Cat.setVelocity(-6, 0)
+            music.baDing.play()
+            SmallCatStatus = statusbars.create(4, 1, StatusBarKind.Health)
+            SmallCatStatus.attachToSprite(Small_Cat)
+        } else {
+            Small_Cat_Summon.sayText("Sorry, Not Enough Cash!", 2000, false)
+            music.powerDown.play()
+        }
+    }
+    if (Selected_Cat == 3) {
+        changeZ()
         if (99 < Money) {
             Money += -100
             Tank_Cat = sprites.create(assets.image`Tank Cat`, SpriteKind.Projectile2)
             Tank_Cat.y = 65 + Z
-            Tank_Cat.x = 140
+            Tank_Cat.x = 150
             Tank_Cat.setVelocity(-3, 0)
             music.baDing.play()
             TankCatStatus = statusbars.create(8, 1, StatusBarKind.Health)
@@ -54,7 +70,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             music.powerDown.play()
         }
     }
-    if (Selected_Cat == 3) {
+    if (Selected_Cat == 4) {
         if (199 < Money) {
             changeZ()
             Money += -200
@@ -78,11 +94,16 @@ controller.anyButton.onEvent(ControllerButtonEvent.Released, function () {
         Normal_Cat_Summon.setImage(assets.image`Normal Cat Summon`)
     }
     if (Selected_Cat == 2) {
+        Small_Cat_Summon.setImage(assets.image`Small Cat Summon Selected`)
+    } else {
+        Small_Cat_Summon.setImage(assets.image`Small Cat Summon`)
+    }
+    if (Selected_Cat == 3) {
         Tank_Cat_Summon.setImage(assets.image`Tank Cat Summon Selected`)
     } else {
         Tank_Cat_Summon.setImage(assets.image`Tank Cat Summon`)
     }
-    if (Selected_Cat == 3) {
+    if (Selected_Cat == 4) {
         Axe_Cat_Summon.setImage(assets.image`Axe Cat Summon Selected`)
     } else {
         Axe_Cat_Summon.setImage(assets.image`Axe Cat Summon`)
@@ -91,7 +112,7 @@ controller.anyButton.onEvent(ControllerButtonEvent.Released, function () {
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Selected_Cat += -1
     if (Selected_Cat == 0) {
-        Selected_Cat = 3
+        Selected_Cat = 4
     }
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
@@ -99,7 +120,7 @@ statusbars.onZero(StatusBarKind.Health, function (status) {
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     Selected_Cat += 1
-    if (Selected_Cat == 4) {
+    if (Selected_Cat == 5) {
         Selected_Cat = 1
     }
 })
@@ -128,12 +149,15 @@ let AxeCatStatus: StatusBarSprite = null
 let Axe_Cat: Sprite = null
 let TankCatStatus: StatusBarSprite = null
 let Tank_Cat: Sprite = null
+let SmallCatStatus: StatusBarSprite = null
+let Small_Cat: Sprite = null
 let NormCatStatus: StatusBarSprite = null
 let Normal_Cat: Sprite = null
 let OneHP = 0
 let Z = 0
 let Axe_Cat_Summon: Sprite = null
 let Tank_Cat_Summon: Sprite = null
+let Small_Cat_Summon: Sprite = null
 let Normal_Cat_Summon: Sprite = null
 let Selected_Cat = 0
 let Money = 0
@@ -163,13 +187,16 @@ Map.left = 2
 Map.y = 13
 Normal_Cat_Summon = sprites.create(assets.image`Normal Cat Summon Selected`, SpriteKind.Projectile)
 Normal_Cat_Summon.y = 100
-Normal_Cat_Summon.x = 40
+Normal_Cat_Summon.x = 20
+Small_Cat_Summon = sprites.create(assets.image`Small Cat Summon`, SpriteKind.Projectile)
+Small_Cat_Summon.x = 60
+Small_Cat_Summon.y = 100
 Tank_Cat_Summon = sprites.create(assets.image`Tank Cat Summon`, SpriteKind.Projectile)
 Tank_Cat_Summon.y = 100
-Tank_Cat_Summon.x = 80
+Tank_Cat_Summon.x = 100
 Axe_Cat_Summon = sprites.create(assets.image`Axe Cat Summon`, SpriteKind.Player)
 Axe_Cat_Summon.y = 100
-Axe_Cat_Summon.x = 120
+Axe_Cat_Summon.x = 140
 Z = 0
 forever(function () {
     pause(150000)
