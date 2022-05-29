@@ -22,69 +22,25 @@ sprites.onOverlap(SpriteKind.Projectile2, SpriteKind.EnemyBase, function (sprite
     statusbars.getStatusBarAttachedTo(StatusBarKind.Health, sprite).value += -1
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (Selected_Cat == 1) {
-        if (49 < Money) {
-            changeZ()
-            Money += -50
-            Normal_Cat = sprites.create(assets.image`Normal Cat`, SpriteKind.Projectile2)
-            Normal_Cat.y = 70 + Z
-            Normal_Cat.x = 150
-            Normal_Cat.setVelocity(-5, 0)
-            music.baDing.play()
-            NormCatStatus = statusbars.create(4, 1, StatusBarKind.Health)
-            NormCatStatus.attachToSprite(Normal_Cat)
-        } else {
-            Normal_Cat_Summon.sayText("Sorry, Not Enough Cash!", 2000, false)
-            music.powerDown.play()
-        }
-    }
-    if (Selected_Cat == 2) {
+    if (Money >= catMoney[Selected_Cat]) {
         changeZ()
-        if (59 < Money) {
-            Money += -60
-            Small_Cat = sprites.create(assets.image`Small Cat`, SpriteKind.Projectile2)
-            Small_Cat.y = 65 + Z
-            Small_Cat.x = 150
-            Small_Cat.setVelocity(-6, 0)
-            music.baDing.play()
-            SmallCatStatus = statusbars.create(4, 1, StatusBarKind.Health)
-            SmallCatStatus.attachToSprite(Small_Cat)
-        } else {
-            Small_Cat_Summon.sayText("Sorry, Not Enough Cash!", 2000, false)
-            music.powerDown.play()
-        }
-    }
-    if (Selected_Cat == 3) {
-        changeZ()
-        if (99 < Money) {
-            Money += -100
-            Tank_Cat = sprites.create(assets.image`Tank Cat`, SpriteKind.Projectile2)
-            Tank_Cat.y = 65 + Z
-            Tank_Cat.x = 150
-            Tank_Cat.setVelocity(-3, 0)
-            music.baDing.play()
-            TankCatStatus = statusbars.create(8, 1, StatusBarKind.Health)
-            TankCatStatus.attachToSprite(Tank_Cat)
-        } else {
-            Tank_Cat_Summon.sayText("Sorry, Not Enough Cash!", 2000, false)
-            music.powerDown.play()
-        }
-    }
-    if (Selected_Cat == 4) {
-        if (199 < Money) {
-            changeZ()
-            Money += -200
-            Axe_Cat = sprites.create(assets.image`Axe Cat`, SpriteKind.Projectile2)
-            Axe_Cat.y = 68 + Z
-            Axe_Cat.x = 140
-            Axe_Cat.setVelocity(-8, 0)
-            music.baDing.play()
-            AxeCatStatus = statusbars.create(8, 1, StatusBarKind.Health)
-            AxeCatStatus.attachToSprite(Axe_Cat, 0, 6)
-        } else {
-            Axe_Cat_Summon.sayText("Sorry, Not Enough Cash!", 2000, false)
-            music.powerDown.play()
-        }
+        Money += catMoney[Selected_Cat]
+        Normal_Cat = sprites.create(catSprite[Selected_Cat], SpriteKind.Projectile2)
+        Normal_Cat.y = catY[Selected_Cat] + Z
+        Normal_Cat.x = 150
+        Normal_Cat.setVelocity(catSpeed[Selected_Cat], 0)
+        animation.runImageAnimation(
+        Normal_Cat,
+        catFrames[Selected_Cat],
+        500,
+        true
+        )
+        music.baDing.play()
+        NormCatStatus = statusbars.create(catHealth[Selected_Cat], 1, StatusBarKind.Health)
+        NormCatStatus.attachToSprite(Normal_Cat)
+    } else {
+        catSummon[Selected_Cat].sayText("Sorry, Not Enough Cash!", 2000, false)
+        music.powerDown.play()
     }
 })
 controller.anyButton.onEvent(ControllerButtonEvent.Released, function () {
@@ -120,8 +76,8 @@ statusbars.onZero(StatusBarKind.Health, function (status) {
 })
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
     Selected_Cat += 1
-    if (Selected_Cat == 5) {
-        Selected_Cat = 1
+    if (Selected_Cat == 4) {
+        Selected_Cat = 0
     }
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
@@ -145,15 +101,16 @@ sprites.onOverlap(SpriteKind.Projectile2, SpriteKind.Enemy, function (sprite, ot
 })
 let Doge_Enemy: Sprite = null
 let Ms_Sign: Sprite = null
-let AxeCatStatus: StatusBarSprite = null
-let Axe_Cat: Sprite = null
-let TankCatStatus: StatusBarSprite = null
-let Tank_Cat: Sprite = null
-let SmallCatStatus: StatusBarSprite = null
-let Small_Cat: Sprite = null
 let NormCatStatus: StatusBarSprite = null
 let Normal_Cat: Sprite = null
 let OneHP = 0
+let catSummon: Sprite[] = []
+let catFrames: Image[][] = []
+let catSprite: Image[] = []
+let catHealth: number[] = []
+let catMoney: number[] = []
+let catY: number[] = []
+let catSpeed: number[] = []
 let Z = 0
 let Axe_Cat_Summon: Sprite = null
 let Tank_Cat_Summon: Sprite = null
@@ -165,7 +122,7 @@ scene.setBackgroundImage(assets.image`ww`)
 music.powerUp.play()
 info.setScore(0)
 Money = 0
-Selected_Cat = 1
+Selected_Cat = 0
 let Cat_Base = sprites.create(assets.image`Cat Base`, SpriteKind.Player)
 Cat_Base.y = 63
 Cat_Base.right = 160
@@ -198,6 +155,180 @@ Axe_Cat_Summon = sprites.create(assets.image`Axe Cat Summon`, SpriteKind.Player)
 Axe_Cat_Summon.y = 100
 Axe_Cat_Summon.x = 140
 Z = 0
+catSpeed = [
+-5,
+-6,
+-3,
+-8
+]
+catY = [
+70,
+65,
+65,
+68
+]
+catMoney = [
+50,
+60,
+100,
+200
+]
+catHealth = [
+4,
+4,
+8,
+8
+]
+catSprite = [
+assets.image`Normal Cat`,
+assets.image`Small Cat`,
+assets.image`Tank Cat`,
+assets.image`Axe Cat`
+]
+catFrames = [
+assets.animation`Animation Normal Cat`,
+assets.animation`Animation Small Cat`,
+[img`
+    ...1........1...
+    ...11......11d..
+    ...111....111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...111f11f111d..
+    ...111f11f111d..
+    ...1111111111d..
+    ...1111ff1111d..
+    ...1111ff1111d..
+    ...111f11f111d..
+    ...11f1111f11d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    .....11d.11d....
+    .....11d.11d....
+    .....11d.11d....
+    `,img`
+    ................
+    ................
+    ...1........1...
+    ...11......11d..
+    ...1111111111d..
+    ...1111111111d..
+    ...111f11f111d..
+    ...111f11f111d..
+    ...1111111111d..
+    ...1111ff1111d..
+    ...1111ff1111d..
+    ...111f11f111d..
+    ...11f1111f11d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    .....11d.11d....
+    .....11d.11d....
+    `],
+[img`
+    ...1........1...
+    ...11......11d..
+    ...111....111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...111f11f111d..
+    ...111f11f111d..
+    ...1111111111d..
+    ...1111ff1111d..
+    ...1111ff1111d..
+    ...111f11f111d..
+    ...11f1111f11d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    .....11d.11d....
+    .....11d.11d....
+    .....11d.11d....
+    `,img`
+    ................
+    ................
+    ...1........1...
+    ...11......11d..
+    ...1111111111d..
+    ...1111111111d..
+    ...111f11f111d..
+    ...111f11f111d..
+    ...1111111111d..
+    ...1111ff1111d..
+    ...1111ff1111d..
+    ...111f11f111d..
+    ...11f1111f11d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    ...1111111111d..
+    .....11d.11d....
+    .....11d.11d....
+    `]
+]
+catSummon = [
+Normal_Cat_Summon,
+Small_Cat_Summon,
+Tank_Cat_Summon,
+Axe_Cat_Summon
+]
 forever(function () {
     pause(150000)
     Ms_Sign = sprites.create(assets.image`Ms Sign`, SpriteKind.Enemy)
@@ -217,10 +348,22 @@ forever(function () {
         Doge_Enemy.y = 70 + randint(0, 4)
         Doge_Enemy.x = 20
         Doge_Enemy.setVelocity(10, 0)
+        animation.runImageAnimation(
+        Doge_Enemy,
+        assets.animation`Animation Snake`,
+        500,
+        true
+        )
     } else {
         Doge_Enemy = sprites.create(assets.image`Doge Enemy`, SpriteKind.Enemy)
         Doge_Enemy.y = 70 + randint(0, 4)
         Doge_Enemy.x = 20
         Doge_Enemy.setVelocity(8, 0)
+        animation.runImageAnimation(
+        Doge_Enemy,
+        assets.animation`Animation Doge Enemy`,
+        500,
+        true
+        )
     }
 })
