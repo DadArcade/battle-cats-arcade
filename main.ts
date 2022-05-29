@@ -24,7 +24,7 @@ sprites.onOverlap(SpriteKind.Projectile2, SpriteKind.EnemyBase, function (sprite
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Money >= catMoney[Selected_Cat]) {
         changeZ()
-        Money += catMoney[Selected_Cat]
+        Money += -1 * catMoney[Selected_Cat]
         Normal_Cat = sprites.create(catSprite[Selected_Cat], SpriteKind.Projectile2)
         Normal_Cat.y = catY[Selected_Cat] + Z
         Normal_Cat.x = 150
@@ -44,22 +44,22 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 controller.anyButton.onEvent(ControllerButtonEvent.Released, function () {
-    if (Selected_Cat == 1) {
+    if (Selected_Cat == 0) {
         Normal_Cat_Summon.setImage(assets.image`Normal Cat Summon Selected`)
     } else {
         Normal_Cat_Summon.setImage(assets.image`Normal Cat Summon`)
     }
-    if (Selected_Cat == 2) {
+    if (Selected_Cat == 1) {
         Small_Cat_Summon.setImage(assets.image`Small Cat Summon Selected`)
     } else {
         Small_Cat_Summon.setImage(assets.image`Small Cat Summon`)
     }
-    if (Selected_Cat == 3) {
+    if (Selected_Cat == 2) {
         Tank_Cat_Summon.setImage(assets.image`Tank Cat Summon Selected`)
     } else {
         Tank_Cat_Summon.setImage(assets.image`Tank Cat Summon`)
     }
-    if (Selected_Cat == 4) {
+    if (Selected_Cat == 3) {
         Axe_Cat_Summon.setImage(assets.image`Axe Cat Summon Selected`)
     } else {
         Axe_Cat_Summon.setImage(assets.image`Axe Cat Summon`)
@@ -67,8 +67,8 @@ controller.anyButton.onEvent(ControllerButtonEvent.Released, function () {
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     Selected_Cat += -1
-    if (Selected_Cat == 0) {
-        Selected_Cat = 4
+    if (Selected_Cat == -1) {
+        Selected_Cat = 3
     }
 })
 statusbars.onZero(StatusBarKind.Health, function (status) {
@@ -255,73 +255,7 @@ assets.animation`Animation Small Cat`,
     .....11d.11d....
     .....11d.11d....
     `],
-[img`
-    ...1........1...
-    ...11......11d..
-    ...111....111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...111f11f111d..
-    ...111f11f111d..
-    ...1111111111d..
-    ...1111ff1111d..
-    ...1111ff1111d..
-    ...111f11f111d..
-    ...11f1111f11d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    .....11d.11d....
-    .....11d.11d....
-    .....11d.11d....
-    `,img`
-    ................
-    ................
-    ...1........1...
-    ...11......11d..
-    ...1111111111d..
-    ...1111111111d..
-    ...111f11f111d..
-    ...111f11f111d..
-    ...1111111111d..
-    ...1111ff1111d..
-    ...1111ff1111d..
-    ...111f11f111d..
-    ...11f1111f11d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    ...1111111111d..
-    .....11d.11d....
-    .....11d.11d....
-    `]
+assets.animation`Animation Axe Cat`
 ]
 catSummon = [
 Normal_Cat_Summon,
